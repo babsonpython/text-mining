@@ -74,7 +74,7 @@ def most_common(hist, excluding_stopwords=False):
     returns: list of (frequency, word) pairs
     """
     most = list()
-    stopwords = open('stopwords.txt', encoding = 'utf8')
+    stopwords = open('data/stopwords.txt', encoding = 'utf8')
     d = dict()
     for line in stopwords:
         for word in line.split():
@@ -103,7 +103,7 @@ def random_word(hist):
 def main():
     # text = get_text('https://www.gutenberg.org/cache/epub/100/pg100.txt')
     # print(text)
-    hist = process_file('shakespeare.txt', skip_header=True)
+    hist = process_file('data/shakespeare.txt', skip_header=True)
     # print(hist)
     print('Total number of words:', total_words(hist))
     print('Number of different words:', different_words(hist))
